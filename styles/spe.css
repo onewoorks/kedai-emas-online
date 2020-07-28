@@ -1,0 +1,6 @@
+body {
+    font-size: 11pt;
+}
+.table-borderless {
+    border-top: none
+}

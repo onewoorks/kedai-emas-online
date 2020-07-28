@@ -1,5 +1,7 @@
 import axios from 'axios'
+import moment from 'moment'
 
+moment.locale("ms-my")
 const PointLog = () => {
     const [pointLog, setPointLog] = React.useState([])
     React.useEffect(()=>{
@@ -13,32 +15,32 @@ const PointLog = () => {
         
         return (
             pointLog.map((value, key) => {
-                console.log(value)
                 return (
                     <tr key={key}>
                         <td>{key+1}</td>
-                        <td>{value.tarikh}</td>
+                        <td>{moment(value.tarikh).utc().format('DD MMMM yyyy')}</td>
                         <td>{value.perkara}</td>
+                        <td className="text-center">{value.domain.replace('-',' ').toUpperCase()}</td>
                         <td className="text-center">{value.type}</td>
                         <td className="text-center">{(value.mata_ganjaran*0.01).toFixed(0)}</td>
                     </tr>
                 )
             })
-            
         )
     }
 
     return (
         <div>
 
-            <table className="table table-bordered">
-                <thead>
+            <table className="table table-bordered table-hover table-sm">
+                <thead className='thead-dark'>
                     <tr>
                         <th>No</th>
                         <th>Tarikh Dan Masa</th>
                         <th>Perkara</th>
-                        <th>Transaksi</th>
-                        <th>Jumlah Mata</th>
+                        <th className="text-center">Cawangan</th>
+                        <th className="text-center">Transaksi</th>
+                        <th className="text-center">Jumlah Mata</th>
                     </tr>
                 </thead>
                 <tbody>
