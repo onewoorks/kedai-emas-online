@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
-import SearchBox from '../components/membership/Searchbox'
+import SearchBox from '../components/membership/SearchBox'
 
 export default function Home() {
   return (
