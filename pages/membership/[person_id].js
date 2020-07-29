@@ -7,10 +7,7 @@ const Membership = () => {
     let person_id = router.person_id
     return (
         <div className="container">
-            <div className="row">
-                <div className="col text-center mt-3"></div>
-            </div>
-            <div className="row">
+            <div className="row mt-5 pt-4">
                 <div className="col-sm-12">
                     <Profile person_id={person_id} />        
                 </div>

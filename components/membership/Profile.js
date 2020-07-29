@@ -17,24 +17,18 @@ const Profile = (props) => {
     },[props])
 
     return (
-        <div className="card mb-2">
-            <div className="card-header">Profile Membership</div>
-            <table className="table table-borderless table-sm">
+        <div className="card mb-2 bg-warning text-white">
+            <div className="card-header text-dark"><strong>Maklumat Pelanggan</strong></div>
+            <table className="table table-borderless table-sm bg-default">
                 <tbody>
                     <tr>
                         <th>Nama</th>
                         <td>{ (profile !== null) ? profile.full_name : null }</td>
-                        <th className="text-center">Mata Terkumpul</th>
+                        
                     </tr>
                     <tr>
                         <th>No Telefon</th>
                         <td>{(profile !== null) ? profile.contact_no : null}</td>
-                        <td 
-                            rowSpan="3"
-                            className="text-center"
-                            style={{verticalAlign: 'middle'}}>
-                                <div className="big-number" >{ (profile !== null) ? (profile.collected*0.01).toFixed(0): 0}</div>
-                            </td>
                     </tr>
                     <tr>
                         <th>Tarikh Daftar</th>
@@ -43,11 +37,15 @@ const Profile = (props) => {
                     </tr>
                     <tr>
                         <th>Cawangan Daftar</th>
-                        <td>{ (profile !== null) ? profile.domain_daftar.replace('-', ' ') : null }</td>
+                        <td>{ (profile !== null) ? profile.domain_daftar : null }</td>
                     </tr>
                     <tr>
                         <th>Tarikh Luput Ahli</th>
                         <td>{ (profile !== null) ? moment(profile.m_lastdate).utc().format('DD MMMM YYYY')  + ' ' + dateRemaining : null} </td>
+                    </tr>
+                    <tr>
+                        <th >Mata Terkumpul</th>
+                        <td>{ (profile !== null) ? (profile.collected*0.01).toFixed(0): 0}</td>
                     </tr>
                 </tbody>
             </table>
