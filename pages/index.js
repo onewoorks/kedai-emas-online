@@ -10,9 +10,6 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Membership Page
-        </h1>
 
         <div>Content
         </div>

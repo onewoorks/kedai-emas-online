@@ -1,25 +1,29 @@
-import Head from 'next/head'
-import axios from 'axios'
+import Link from 'next/link'
+const Index = () => {
+    const [cardNo, setCardNo] = React.useState(null)
 
-import Profile from '../../components/membership/Profile'
-import PointLog from '../../components/membership/PointLog'
-
-const Membership = () => {
+    const checkMembership = (e) => {
+        e.preventDefault()
+        window.location.href = `/membership/${cardNo}`
+    }
     return (
-        <div className="container">
-            <div className="row">
-                <div className="col text-center"><h1>Membership Info</h1></div>
-            </div>
-            <div className="row">
-                <div className="col-4 col-sm-12">
-                    <Profile />        
+        <div className="container" onSubmit={checkMembership}>
+            <form>
+                <div className="input-group">
+                    <input type='text' className="form-control" name="card_no"
+                     onKeyUp={(e) => setCardNo(e.target.value)}
+                     autoComplete="off"
+                     />
+                    <div className="input-group-append">
+                        <button type="submit" className="btn btn-primary">
+                            Carian
+                        </button>
+                    </div>
                 </div>
-                <div className="col-8 col-sm-12">
-                    <PointLog />
-                </div>
-            </div>
+
+            </form>
+
         </div>
     )
 }
-
-export default Membership;
+export default Index

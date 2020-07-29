@@ -4,3 +4,13 @@ body {
 .table-borderless {
     border-top: none
 }
+
+.big-number {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.log-number {
+    font-size: 20px;
+    font-weight: bold;
+}
