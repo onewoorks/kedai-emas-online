@@ -9,6 +9,7 @@ const Membership = () => {
         <div className="container">
             <div className="row mt-5 pt-4">
                 <div className="col-sm-12">
+                 
                     <Profile person_id={person_id} />        
                 </div>
                 <div className="col-sm-12">
