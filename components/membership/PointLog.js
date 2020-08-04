@@ -13,7 +13,7 @@ const PointLog = (props) => {
             .then((response) => {
                 axios
                     .get(
-                        `https://onewoorks-solutions.com/membership/public/person/point-log/ariffin-kemaman/${response.data.person_id}`
+                        `https://onewoorks-solutions.com/membership/public/person/point-log-card-no/ariffin-kemaman/${props.person_id}`
                     )
                     .then((resp) => {
                         setPointLog(resp.data)
