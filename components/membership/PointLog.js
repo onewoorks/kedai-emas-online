@@ -42,7 +42,7 @@ const PointLog = (props) => {
                         </td>
                         <td className="text-center">{value.type}</td>
                         <td className="text-center">
-                            {(value.mata_ganjaran * 0.01).toFixed(0)}
+                            {((value.mata_ganjaran * 0.01)*100/100).toFixed(0)}
                         </td>
                     </tr>
                 )
