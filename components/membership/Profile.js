@@ -72,7 +72,7 @@ const Profile = (props) => {
                         <th>Mata Terkumpul</th>
                         <td>
                             {profile !== null
-                                ? (profile.collected * 0.01).toFixed(0)
+                                ? ((profile.collected * 0.01)*100/100).toFixed(0)
                                 : 0}
                         </td>
                     </tr>
