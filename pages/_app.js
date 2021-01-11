@@ -1,19 +1,23 @@
 import '../styles/globals.css'
 import '../styles/spe.css'
+
 import Head from 'next/head'
+import LayoutHeader from '../components/layout/Header'
+import LayoutFooter from '../components/layout/Footer'
 
 function MyApp({ Component, pageProps }) {
     return (
         <>
             <Head>
-                <link
-                    rel="stylesheet"
-                    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-                    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-                    crossorigin="anonymous"
-                />
+                <title>Kedai Emas Online</title>
+                <link rel="icon" href="/favicon.ico" />
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"></link>
             </Head>
-            <Component {...pageProps} />
+            <LayoutHeader />
+            <div className="container mt-3">
+                <Component {...pageProps} />
+            </div>
+            <LayoutFooter />
         </>
     )
 }

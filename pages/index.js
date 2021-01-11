@@ -1,25 +1,29 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import ModuleSliders from '../components/modules/sliders.js'
+import HargaEmas from '../components/modules/harga_emas'
+import LatestProducts from '../components/products/latest_product'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <div >
+      
+      <div className="container" >
+        <ModuleSliders />
 
-      <main className={styles.main}>
-
-        <div>Content
+        <div className="row mt-3">
+          <div className="col-lg-4">
+            <HargaEmas />
+          </div>
+          <div className="col-lg-8">
+            <div className="card">
+              <div className="card-body">
+                Col B
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-          Developed by{' '}
-          <a style={{paddingRight:5, paddingLeft:5}} href="https://onewoorks-solutions.com">Onewoorks Solutions</a>{' '}
-          for Kedai Emas Ariffin
-      </footer>
+        <LatestProducts />
+      </div>
+      
     </div>
   )
 }
