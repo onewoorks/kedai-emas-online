@@ -14,3 +14,33 @@ body {
     font-size: 20px;
     font-weight: bold;
 }
+
+nav .list-inline {
+    margin-bottom: 0
+}
+
+nav .list-inline-item {
+    font-size: 26px;
+    width: 40px
+}
+
+h1 { 
+    font-size: 24px;
+    text-align: center;
+    margin-top: 20px
+}
+
+h2 { 
+    font-size: 17px
+}
+
+.card-footer {
+    background-color: #fff
+}
+
+.hargaemas td {
+    text-align: 'center';
+}
+.hargaemas tr:last-child td, .hargaemas tr:last-child th {
+    /* border-bottom: none; */
+}

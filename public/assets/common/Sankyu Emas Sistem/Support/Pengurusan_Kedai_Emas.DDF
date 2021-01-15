@@ -1,0 +1,37 @@
+.OPTION EXPLICIT
+.Set Cabinet=off
+.Set Compress=off
+.Set MaxDiskSize=CDROM
+.Set ReservePerCabinetSize=6144
+.Set DiskDirectoryTemplate=".."
+.Set CompressionType=MSZIP
+.Set CompressionLevel=7
+.Set CompressionMemory=21
+.Set CabinetNameTemplate="Pengurusan Kedai Emas 2.0.0.CAB"
+"Setup.Lst"
+"setup.exe"
+.Set Cabinet=on
+.Set Compress=on
+"Pengurusan Kedai Emas 2.0.0.exe"
+"msvbvm60.dll"
+"oleaut32.dll"
+"olepro32.dll"
+"asycfilt.dll"
+"stdole2.tlb"
+"COMCAT.DLL"
+"msado20.tlb"
+"MSBIND.DLL"
+"MSSTDFMT.DLL"
+"MSDBRPTR.DLL"
+"COMCT232.OCX"
+"comctl32.ocx"
+"MSADODC.OCX"
+"MSCAL.OCX"
+"MSDATGRD.OCX"
+"MSDATLST.OCX"
+"MSFLXGRD.OCX"
+"mscomct2.ocx"
+"comdlg32.ocx"
+"SETUP1.EXE"
+"VB6STKIT.DLL"
+"ST6UNST.EXE"

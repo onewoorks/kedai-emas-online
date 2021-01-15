@@ -1,29 +1,24 @@
 import '../styles/globals.css'
 import '../styles/spe.css'
+
 import Head from 'next/head'
-import Link from 'next/link'
+import LayoutHeader from '../components/layout/Header'
+import LayoutFooter from '../components/layout/Footer'
 
 function MyApp({ Component, pageProps }) {
     return (
         <>
             <Head>
-                <title>Kedai Emas Ariffin</title>
+                <title>Kedai Emas Online</title>
                 <link rel="icon" href="/favicon.ico" />
-                <link
-                    rel="stylesheet"
-                    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-                    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-                    crossorigin="anonymous"
-                />
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"></link>
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"></link>
             </Head>
-            <nav className="navbar fixed-top navbar-light bg-dark border-bottom" >
-                <a className="navbar-brand text-light" href="/">
-                    Kedai Emas Ariffin
-                </a>
-            </nav>
-            <div className="">
+            <LayoutHeader />
+            <div className="container mt-3">
                 <Component {...pageProps} />
             </div>
+            <LayoutFooter />
         </>
     )
 }
