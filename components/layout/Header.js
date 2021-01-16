@@ -4,6 +4,7 @@ import { useRouter } from 'next/router'
 import HeaderNavBar from './HeaderNavBar'
 
 const LayoutHeader = () => {
+    console.log(process.env.API_KEDAI)
     const router = useRouter()
 
     const MenuShow = () => {
@@ -23,6 +24,7 @@ const LayoutHeader = () => {
             <HeaderNavBar />
             <div className="text-center mt-3" style={{ height: 90 }}>
                 logo
+                <div style={{fontStyle:'italic'}}>{ process.env.KEDAI }</div>
             </div>
             <MenuShow />
         </div>

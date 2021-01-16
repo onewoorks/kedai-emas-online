@@ -1,4 +1,7 @@
 import Link  from 'next/link';
+
+import { motion } from 'framer-motion'
+
 import { PhotoPlaceholder } from 'react-placeholder-image';
 
 const ProductSingleItem = (props) => {
@@ -7,6 +10,16 @@ const ProductSingleItem = (props) => {
     let max = Math.floor(10000);
     const harga_item = Math.floor(Math.random() * (max - min + 1) + min).toFixed(2);
     return (
+        <motion.div
+                                
+                                whileHover={{
+                                    boxShadow: "1px 3px 5px 2px rgba(0,0,0,0.1)",
+                                    scale: 1.05,
+                                    transition: {
+                                        duration: 0.5,
+                                    },
+                                }}
+                            >
         <Link href={`/products/${item.code}`}>
             <div className="card mt-3">
                 <div className="card-img-top" style={{overflow: 'hidden'}}>
@@ -22,6 +35,7 @@ const ProductSingleItem = (props) => {
                 </div>
             </div>
         </Link>
+        </motion.div>
     )
 }
 
