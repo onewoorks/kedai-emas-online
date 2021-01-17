@@ -4,7 +4,6 @@ import { useRouter } from 'next/router'
 import HeaderNavBar from './HeaderNavBar'
 
 const LayoutHeader = () => {
-    console.log(process.env.API_KEDAI)
     const router = useRouter()
 
     const MenuShow = () => {

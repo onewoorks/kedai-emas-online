@@ -24,7 +24,7 @@ const LatestProducts = () => {
                 {products.map((x, index) => {
                     return (
                         <div key={index} className="col-lg-3">
-                                <ProductSingleItem item={x} />
+                                <ProductSingleItem item={x} delay={index} />
                         </div>
                     )
                 })}

@@ -5,22 +5,20 @@ import LatestProducts from '../components/products/latest_products'
 
 export default function Home() {
     return (
-        <div>
-            <div className="container">
-                <ModuleFilters styles="mb-3" />
-                <ModuleSliders />
-                    <div className="row mt-3">
-                        <div className="col-lg-4">
-                            <HargaEmas />
-                        </div>
-                        <div className="col-lg-8">
-                            <div className="card" style={{ height: 334 }}>
-                                <div className="card-body"></div>
-                            </div>
-                        </div>
+        <div className="container">
+            <ModuleFilters styles="mb-3" />
+            <ModuleSliders />
+            <div className="row mt-3">
+                <div className="col-lg-4">
+                    <HargaEmas />
+                </div>
+                <div className="col-lg-8">
+                    <div className="card" style={{ height: 334 }}>
+                        <div className="card-body"></div>
                     </div>
-                <LatestProducts />
+                </div>
             </div>
+            <LatestProducts />
         </div>
     )
 }
