@@ -19,10 +19,6 @@ export const AppContext = React.createContext(store)
 function MyApp({ Component, pageProps, router }) {
     const app_name = "kedaiEmasOnline_development"
     const [appsData, setAppData]  = React.useState(() => GetLocalStorage(app_name, store))
-    console.log(appsData)
-    // React.useEffect(()=>{
-    //     SetLocalStorage(app_name, appsData)
-    // })
     return (
         <>
             <AppContext.Provider value={store}>

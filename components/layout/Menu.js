@@ -4,30 +4,18 @@ const Menu = () => {
     const [menuList, setMenuList] = React.useState([])
 
     React.useEffect(() => {
-        setMenuList([
-            {
-                label: 'Kategory A',
-                href: '1',
-            },
-            {
-                label: 'Kategory B',
-                href: '2',
-            },
-            {
-                label: 'Kategory C',
-                href: '3',
-            },
-            { label: 'Kategory D', href: '4' },
-        ])
+        fetch('http://localhost:8000/spe/rujukan/kategori-kumpulan')
+        .then((response) => response.json())
+        .then((data) => setMenuList(data))
     }, [])
 
     const LinkItem = (props) => {
         let menu = props.data
         return (
             <li className="nav-item">
-                <Link href={`/categories/${menu.href}`}>
+                <Link href={`/categories/${menu.id}`}>
                     <a className="nav-link active" href="#">
-                        {menu.label}
+                        {menu.category_name}
                     </a>
                 </Link>
             </li>

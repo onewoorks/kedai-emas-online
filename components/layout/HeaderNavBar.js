@@ -6,7 +6,8 @@ const HeaderNavBar = () => {
 
     React.useEffect(()=>{
         let apps_data = GetLocalStorage()
-        setCart(apps_data.cart)
+        if (typeof apps_data !== 'undefined')
+            setCart(apps_data.cart)
     },[])
 
     return (
@@ -28,12 +29,17 @@ const HeaderNavBar = () => {
                                 <i className="bi bi-person-circle"></i>
                             </li>
                         </Link>
+                        <Link href={`/membership/like`}>
+                            <li className="list-inline-item">
+                                <i className="bi bi-heart"></i>
+                            </li>
+                        </Link>
                         <Link href={`/checkout/carts`}>
                             <li className="list-inline-item">
                                 <i className="bi bi-bag-check"></i>
                                 { cart === null ? '' : (
                                     <span
-                                    class="badge rounded-pill bg-primary"
+                                    className="badge rounded-pill bg-primary"
                                     style={{
                                         position: 'absolute',
                                         fontSize: '10px',
