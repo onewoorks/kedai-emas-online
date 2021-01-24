@@ -24,6 +24,9 @@ const Menu = () => {
 
     return (
         <ul className="nav justify-content-center mb-3">
+            <Link href={'/'}>
+                <a className="nav-link">Laman Utama</a>
+            </Link>
             {menuList.map((x, index) => {
                 return <LinkItem key={index} data={x} />
             })}
