@@ -8,12 +8,12 @@ const PointLog = (props) => {
     React.useEffect(() => {
         axios
             .get(
-                `https://onewoorks-solutions.com/membership/public/person-and-point-card/${props.person_id}`
+                `https://spe-membership.pengurusanemas.my/person-and-point-card/${props.person_id}`
             )
             .then((response) => {
                 axios
                     .get(
-                        `https://onewoorks-solutions.com/membership/public/person/point-log-card-no/ariffin-kemaman/${props.person_id}`
+                        `https://spe-membership.pengurusanemas.my/person/point-log-card-no/ariffin-kemaman/${props.person_id}`
                     )
                     .then((resp) => {
                         setPointLog(resp.data)
