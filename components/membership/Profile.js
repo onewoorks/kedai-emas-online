@@ -8,7 +8,7 @@ const Profile = (props) => {
     React.useEffect(() => {
         axios
             .get(
-                `https://onewoorks-solutions.com/membership/public/person-and-point-card/${props.person_id}`
+                `https://spe-membership.pengurusanemas.my/person-and-point-card/${props.person_id}`
             )
             .then((response) => {
                 if (response.data !== false) {
