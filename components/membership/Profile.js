@@ -56,7 +56,7 @@ const Profile = (props) => {
                             {profile !== null ? profile.domain_daftar : null}
                         </td>
                     </tr>
-                    <tr>
+                    <tr style='display:none'>
                         <th>Tarikh Luput Ahli</th>
                         <td>
                             {profile !== null
