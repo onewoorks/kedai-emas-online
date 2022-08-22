@@ -1,5 +1,5 @@
 import { useRouter} from 'next/router'
-import Profile from '../../components/membership/Profile'
+// import Profile from '../../components/membership/Profile'
 import PointLog from '../../components/membership/PointLog'
 
 const Membership = () => {
