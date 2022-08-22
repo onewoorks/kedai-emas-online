@@ -104,9 +104,7 @@ const PointLog = (props) => {
                                         {value.type}
                                     </div>
                                     <div className="text-center log-number">
-                                        {(value.mata_ganjaran * 0.01).toFixed(
-                                            0
-                                        )}
+                                        { parseInt(value.mata_ganjaran * 0.01) }
                                     </div>
                                 </div>
                             </div>
